@@ -41,11 +41,6 @@ project "GLFW"
 			"_CRT_SECURE_NO_WARNINGS"
 		}
 
-        postbuildcommands --编译后自定义命令
-        {
-            ("{COPY} %{cfg.buildtarget.relpath} %{wks.location}/bin/" .. outputdir .. "/FakeRealEditor") --lib库到FakeRealEditor.exe的同一目录下去
-        }
-
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
